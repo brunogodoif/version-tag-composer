@@ -15,10 +15,10 @@ try {
     $data = json_decode($content, true);
 
     $linesToAdd = [
-        'app-version' => 'php version-tag-get.php',
-        'app-version-patch' => 'php version-tag-increment.php --mode=patch',
-        'app-version-minor' => 'php version-tag-increment.php --mode=minor',
-        'app-version-major' => 'php version-tag-increment.php --mode=major',
+        'app-version' => 'php ' . __DIR__ . DIRECTORY_SEPARATOR . 'version-tag-get.php',
+        'app-version-patch' => 'php ' . __DIR__ . DIRECTORY_SEPARATOR . 'version-tag-increment.php --mode=patch',
+        'app-version-minor' => 'php ' . __DIR__ . DIRECTORY_SEPARATOR . 'version-tag-increment.php --mode=minor',
+        'app-version-major' => 'php ' . __DIR__ . DIRECTORY_SEPARATOR . 'version-tag-increment.php --mode=major',
     ];
 
 // Verifica se a tag "scripts" já existe
