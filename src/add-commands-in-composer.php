@@ -1,7 +1,5 @@
 <?php
 
-echo dirname(__DIR__, 4) . "\n";
-
 // Caminho para o arquivo composer.json do projeto principal
 $composerJsonPath = dirname(__DIR__, 4) . '/composer.json';
 // Lê o conteúdo atual do composer.json

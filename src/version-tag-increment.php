@@ -19,13 +19,13 @@ if ($options['mode'] == 'patch') {
 }
 
 $json['version'] = $major . "." . $minor . "." . $patch;
-$result = file_put_contents('composer.json', json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
+$result = file_put_contents(dirname(__DIR__, 4) . '/composer.json', json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
 if ($result) {
     echo "Increment to version:" . $json['version'];
 }
 echo "\n\r";
 
-exec('php version-tag-create.php --mode='.$options['mode']);
+exec('php version-tag-create.php --mode=' . $options['mode']);
 
 ?>
