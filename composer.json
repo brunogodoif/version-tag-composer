@@ -20,9 +20,9 @@
   },
   "scripts": {
     "post-autoload-dump": "php ./src/add-commands-in-composer.php",
-    "app-version": "php version-tag-get.php",
-    "app-version-patch": "php version-tag-increment.php --mode=patch",
-    "app-version-minor": "php version-tag-increment.php --mode=minor",
-    "app-version-major": "php version-tag-increment.php --mode=major"
+    "app-version": "php ./src/version-tag-get.php",
+    "app-version-patch": "php ./src/version-tag-increment.php --mode=patch",
+    "app-version-minor": "php ./src/version-tag-increment.php --mode=minor",
+    "app-version-major": "php ./src/version-tag-increment.php --mode=major"
   }
 }
