@@ -6,7 +6,7 @@ if (!isset($options['mode'])) {
     exit(1);
 }
 
-$json = json_decode(file_get_contents(dirname(__DIR__, 4) . '/composer.json'), true);
+$json = json_decode(file_get_contents(dirname(__DIR__, 4) . DIRECTORY_SEPARATOR. 'composer.json'), true);
 $version = 'v' . $json['version'];
 echo "Commit version: $version" . "\n\r";
 exec("git pull");
